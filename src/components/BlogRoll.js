@@ -9,13 +9,13 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div className="flex flex-col items-center">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="mb-5" key={post.id}>
               <article
-                className={`blog-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
+                className={`blog-list-item tile is-child rounded p-4 ${
+                  post.frontmatter.featuredpost ? 'bg-gray-100' : ''
                 }`}
               >
                 <header>
@@ -31,7 +31,7 @@ class BlogRoll extends React.Component {
                   ) : null}
                   <p className="post-meta">
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="title text-gray-700 hover:text-gray-500 is-size-4"
                       to={post.fields.slug}
                     >
                       {post.frontmatter.title}
