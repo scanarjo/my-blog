@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'scanarjod.dev',
+    title: 'scanarjo.dev',
     description:
       'This is my new JAM Stack blog, built using Netlify CMS + Gatsby',
   },
